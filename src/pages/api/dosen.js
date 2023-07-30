@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 		const client = await clientPromise;
 		const db = client.db("ryve_tugas_4_android");
 
-		const data = await db.collection("dosens").find({}).toArray();
+		const data = await db.collection("dosen").find({}).toArray();
 
 		return res.json(data);
 	} catch (e) {
