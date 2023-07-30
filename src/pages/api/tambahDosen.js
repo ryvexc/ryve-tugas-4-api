@@ -8,8 +8,8 @@ export default async function handler(req, res) {
 		const db = client.db("ryve_tugas_4_android");
 
 		const data = await db.collection("dosen").insertOne({
-			nama: req.body.namaDosen,
-			kelas: req.body.kelasDosen,
+			nama: req.query.namaDosen,
+			kelas: req.query.kelasDosen,
 		});
 
 		return res.status(200);
