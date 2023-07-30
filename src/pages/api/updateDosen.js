@@ -14,6 +14,7 @@ export default async function handler(req, res) {
 				$set: {
 					nama: req.query.namaDosen,
 					kelas: req.query.kelasDosen,
+					nomor: req.query.nomorDosen,
 				},
 			},
 		);

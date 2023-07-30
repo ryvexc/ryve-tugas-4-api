@@ -10,6 +10,7 @@ export default async function handler(req, res) {
 		const data = await db.collection("dosen").insertOne({
 			nama: req.query.namaDosen,
 			kelas: req.query.kelasDosen,
+			nomor: req.query.nomorDosen,
 		});
 
 		return res.status(200);
