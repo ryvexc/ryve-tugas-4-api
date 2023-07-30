@@ -10,9 +10,9 @@ export default async function handler(req, res) {
 
 		const data = await db
 			.collection("dosen")
-			.deleteOne({ id: new ObjectId(req.query.id) });
+			.deleteOne({ _id: new ObjectId(req.query.id) });
 
-		return res.status(200);
+		return res.status(200).json({ ok: true });
 	} catch (e) {
 		return res.status(400).json({ error: true });
 	}
