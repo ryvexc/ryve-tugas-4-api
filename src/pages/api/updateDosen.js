@@ -12,8 +12,8 @@ export default async function handler(req, res) {
 			{ _id: new ObjectId(req.query.id) },
 			{
 				$set: {
-					nama: req.query.nama,
-					kelas: req.query.kelas,
+					nama: req.query.namaDosen,
+					kelas: req.query.kelasDosen,
 				},
 			},
 		);
